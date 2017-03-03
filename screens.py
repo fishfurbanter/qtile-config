@@ -3,6 +3,7 @@ from libqtile import bar, widget
 import os
 
 bar_textbox = os.environ['USER'].title()
+seperator = ' | '
 
 screens = [
     Screen(
@@ -13,7 +14,7 @@ screens = [
                 widget.WindowName(),
                 widget.TextBox(bar_textbox, name="default"),
                 widget.Systray(),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                widget.Clock(format='%Y-%m-%d ' + seperator + '%a %I:%M %p'),
             ],
             30,
         ),

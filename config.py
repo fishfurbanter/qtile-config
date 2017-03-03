@@ -15,6 +15,10 @@ widget_defaults = dict(
     font='DroidSansMonoForPowerline Nerd',
     fontsize=16,
     padding=3,
+    background='#2f343f',
+    fontshadow='#676E7D',
+    foreground='#f3f4f5',
+    low_foreground='#676E7D',
 )
 
 
