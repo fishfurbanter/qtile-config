@@ -12,8 +12,8 @@ from libqtile.config import Group, Match
 #groups = [Group(i) for i in group_list ]
 
 groups = [
-    Group("Browser", matches=[Match(wm_class=["Firefox"])]),
-    Group("Shell"),
+    Group("  ", matches=[Match(wm_class=["Firefox"])]),
+    Group("  "),
     Group("Media"),
     Group("Files"),
 ]
