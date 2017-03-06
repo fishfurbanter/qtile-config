@@ -12,7 +12,6 @@ layouts = [
 ]
 
 
-
 # Drag floating layouts.
 
 main = None

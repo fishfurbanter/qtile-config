@@ -18,6 +18,12 @@ widget_defaults = dict(
     markup=True,
 )
 
+# KeyboardLayout config
+keyboardlayout_c= dict(
+    configured_keyboards=['us', 'il'],
+    update_interval=1,
+)
+
 # Wallpaper config
 wallpaper_c = dict(
     directory=wallpaper_dir,
@@ -63,6 +69,7 @@ screens = [
         bottom=bar.Bar(
             [
                 widget.Wallpaper(**wallpaper_c),
+                widget.KeyboardLayout(**keyboardlayout_c),
                 widget.GroupBox(**groupbox_c),
                 widget.Sep(**seperator_c),
                 widget.Prompt(),

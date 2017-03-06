@@ -1,8 +1,14 @@
 from libqtile.config import Key, Drag, Click
-from libqtile.command import lazy
+from libqtile import widget
+from libqtile.command import lazy, Client
 from libqtile.dgroups import simple_key_binder
+from libqtile.widget import KeyboardLayout
 
+
+
+c = Client()
 mod = "mod4"
+mod1 = "mod1"
 dgroups_key_binder = simple_key_binder(mod)
 
 keys = [
@@ -28,7 +34,7 @@ keys = [
 
     # Switch window focus to other pane(s) of stack
     Key(
-        [mod], "space",
+        [mod], "n",
         lazy.layout.next()
     ),
 
@@ -37,6 +43,7 @@ keys = [
         [mod, "shift"], "space",
         lazy.layout.rotate()
     ),
+
 
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
@@ -59,7 +66,8 @@ keys = [
     # Start applications
     Key([mod], "f", lazy.spawn("firefox")),
     Key([mod], "m", lazy.spawn("pcmanfm")),
-
+    Key(["shift"], "space",
+        lazy.widget["keyboardlayout"].next_keyboard()),
 ]
 
 
