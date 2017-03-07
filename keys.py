@@ -61,7 +61,7 @@ keys = [
 
     Key([mod, "control"], "r", lazy.restart()),
     Key([mod, "control"], "q", lazy.shutdown()),
-    Key([mod], "r", lazy.spawncmd()),
+    Key([mod], "d", lazy.spawncmd()),
 
     # Start applications
     Key([mod], "f", lazy.spawn("firefox")),
