@@ -3,10 +3,9 @@ from libqtile import widget
 from libqtile.command import lazy, Client
 from libqtile.dgroups import simple_key_binder
 from libqtile.widget import KeyboardLayout
+from random import randint
 
 
-
-c = Client()
 mod = "mod4"
 mod1 = "mod1"
 dgroups_key_binder = simple_key_binder(mod)
@@ -68,6 +67,7 @@ keys = [
     Key([mod], "m", lazy.spawn("pcmanfm")),
     Key(["shift"], "space",
         lazy.widget["keyboardlayout"].next_keyboard()),
+
 ]
 
 

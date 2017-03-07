@@ -8,7 +8,7 @@ from screens import screens, widget_defaults
 
 layouts = [
     layout.Max(),
-    layout.Stack(num_stacks=2),
+    layout.Stack(num_stacks=2, border_focus='#383c4a'),
     layout.TreeTab()
 ]
 
