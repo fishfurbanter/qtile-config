@@ -33,3 +33,23 @@ dgroups_app_rules = []
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
+
+"""
+def main(qtile):
+    from libqtile.window import Internal
+    from libqtile.drawer import Drawer
+    height = 200
+    width = 200
+    win = Internal.create(
+        qtile, x=50, y=50, width=width, height=height, opacity=1
+    )
+
+    drawer = Drawer(qtile, win.window.wid, width, height)
+    drawer.clear("f0f000")
+
+    qtile.windowMap[win.window.wid] = win
+    win.place(150, 50, 200, 150, 1, 100)
+    win.handle_Expose = lambda e: drawer.draw()
+    win.handle_ButtonPress = lambda e: None
+    win.unhide()
+"""

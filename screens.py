@@ -124,7 +124,7 @@ screens = [
                 widget.NetGraph(),
                 widget.TextBox(text=' '),
             ],
-            25,
+            27,
         ),
     ),
 ]
