@@ -82,9 +82,9 @@ netgraph_c = dict(
 
 # Pacman widget config
 pacman_c = dict(
-    execute='pacman -Syy'
+    distro='Arch',
+    execute='pacman -Qu',
 )
-
 # Prompt config
 prompt_c = dict(
 )
@@ -110,6 +110,7 @@ screens = [
                 widget.Sep(**seperator_c),
                 widget.GroupBox(**groupbox_c),
                 widget.Sep(**seperator_c),
+                widget.CheckUpdates(**pacman_c),
                 widget.Prompt(name='prompt',
                         bell_style='visual', prompt='>>>  ',
                         visual_bell_color=widget_defaults['background'],
