@@ -12,6 +12,7 @@ from box import InfoBox
 
 layouts = [
     layout.Max(),
+    layout.Tile(border_focus="#000000"),
     layout.Stack(num_stacks=2, border_focus='#383c4a'),
     layout.TreeTab()
 ]
@@ -38,7 +39,7 @@ def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
 
-
+"""
 def main(qtile):
     #pass
     default_infobox = dict(
@@ -54,4 +55,4 @@ def main(qtile):
         hide_box = True,
     )
     InfoBox.create_box(qtile, **default_infobox)
-
+"""
