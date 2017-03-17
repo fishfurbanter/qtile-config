@@ -89,7 +89,10 @@ pacman_c = dict(
 prompt_c = dict(
 )
 
-
+tasklist_c = dict(
+    maxwidth='2000',
+    borderwidth=1,
+                  )
 
 
 
@@ -130,3 +133,4 @@ screens = [
         ),
     ),
 ]
+#widget.TaskList(borderwidth=2, fontsize=13, max_title_width=300),

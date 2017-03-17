@@ -1,4 +1,7 @@
 __pycache__
 .cfg
 .*\.swp
+.ropeproject
 *.pyc
+*.swo
+*.swn

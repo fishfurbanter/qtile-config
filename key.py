@@ -3,7 +3,6 @@ from libqtile import widget
 from libqtile.command import lazy, Client
 from libqtile.dgroups import simple_key_binder
 from libqtile.widget import KeyboardLayout
-from random import randint
 
 mod = "mod4"
 mod1 = "mod1"
