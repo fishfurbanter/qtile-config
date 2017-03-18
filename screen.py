@@ -12,8 +12,8 @@ wallpaper_dir = os.environ['WALLPAPER_DIR']
 widget_defaults = dict(
     font='Droid Sans Mono Dotted For Powerline',
     fontsize=16,
-    padding=10,
     background='#2f343f',
+    padding=3,
     fontshadow='#2f343f',
     foreground='#f3f4f5',
     markup=True,
@@ -118,7 +118,7 @@ screens = [
                         bell_style='visual', prompt='>>>  ',
                         visual_bell_color=widget_defaults['background'],
                         **widget_defaults),
-                widget.WindowTabs(),
+                widget.TaskList(borderwidth=2, fontsize=13),
                 widget.Sep(**seperator_c),
                 widget.Clock(**clock_date_c),
                 widget.Sep(**seperator_c),
@@ -133,4 +133,3 @@ screens = [
         ),
     ),
 ]
-#widget.TaskList(borderwidth=2, fontsize=13, max_title_width=300),
