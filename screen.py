@@ -13,7 +13,7 @@ widget_defaults = dict(
     font='Droid Sans Mono Dotted For Powerline',
     fontsize=16,
     background='#2f343f',
-    padding=3,
+    padding=10,
     fontshadow='#2f343f',
     foreground='#f3f4f5',
     markup=True,
@@ -85,14 +85,21 @@ pacman_c = dict(
     distro='Arch',
     execute='pacman -Qu',
 )
+
 # Prompt config
 prompt_c = dict(
 )
 
+# Padding is added to override
+# defaults, when padding > 3
+# the object exceeds container
+# limits
 tasklist_c = dict(
     maxwidth='2000',
-    borderwidth=1,
-                  )
+    borderwidth=2,
+    fontsize=15,
+    padding=3,
+)
 
 
 
@@ -118,7 +125,7 @@ screens = [
                         bell_style='visual', prompt='>>>  ',
                         visual_bell_color=widget_defaults['background'],
                         **widget_defaults),
-                widget.TaskList(borderwidth=2, fontsize=13),
+                widget.TaskList(**tasklist_c),
                 widget.Sep(**seperator_c),
                 widget.Clock(**clock_date_c),
                 widget.Sep(**seperator_c),
