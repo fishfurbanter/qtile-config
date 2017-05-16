@@ -101,7 +101,12 @@ tasklist_c = dict(
     padding=3,
 )
 
-
+# Battery for laptops
+#battery_c = dict(
+#    charge_char='',
+#    battery_name='BAT1',
+#    discharge_char='',
+#)
 
 
 ################
@@ -126,6 +131,8 @@ screens = [
                         visual_bell_color=widget_defaults['background'],
                         **widget_defaults),
                 widget.TaskList(**tasklist_c),
+                #widget.Sep(**seperator_c),
+                #widget.Battery(**battery_c),
                 widget.Sep(**seperator_c),
                 widget.Clock(**clock_date_c),
                 widget.Sep(**seperator_c),
