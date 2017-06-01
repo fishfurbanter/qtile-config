@@ -52,6 +52,8 @@ keys = [
     ),
     Key([mod], "Return", lazy.spawn("urxvt")),
 
+    Key([mod, "shift"], "u", lazy.spawn("urxvt -e ranger")),
+
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout()),
     Key([mod, "shift"], "w", lazy.window.kill()),
