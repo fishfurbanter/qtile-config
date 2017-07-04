@@ -51,6 +51,7 @@ keys = [
         lazy.layout.toggle_split()
     ),
     Key([mod], "Return", lazy.spawn("urxvt")),
+    Key([mod], "t", lazy.spawn("urxvt")),
 
     Key([mod, "shift"], "u", lazy.spawn("urxvt -e ranger")),
 
