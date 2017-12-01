@@ -40,7 +40,10 @@ keys = [
         [mod, "shift"], "space",
         lazy.layout.rotate()
     ),
-
+Key(
+        [mod, "shift"], "f",
+        lazy.window.toggle_floating()
+),
 
     # Toggle between split and unsplit sides of stack.
     # Split = all windows displayed
@@ -68,9 +71,10 @@ keys = [
     # Start applications
     Key([mod], "f", lazy.spawn("firefox")),
     Key([mod], "m", lazy.spawn("pcmanfm")),
-    Key(["shift"], "space",
+    Key([mod, "shift"], "space",
         lazy.widget["keyboardlayout"].next_keyboard()),
-
+    Key([mod], "h",      lazy.to_screen(0)),
+    Key([mod], "l", lazy.to_screen(1)),
 ]
 
 
