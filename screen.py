@@ -20,7 +20,7 @@ widget_defaults = dict(
 )
 
 # KeyboardLayout config
-keyboardlayout_c= dict(
+keyboardlayout_c = dict(
     configured_keyboards=['us', 'il'],
     update_interval=1,
 )
@@ -101,17 +101,6 @@ tasklist_c = dict(
     padding=3,
 )
 
-# Battery for laptops
-#battery_c = dict(
-#    charge_char='',
-#    battery_name='BAT1',
-#    discharge_char='',
-#)
-
-
-################
-# Screens start
-################
 
 screens = [
     Screen(
@@ -125,14 +114,11 @@ screens = [
                 widget.Sep(**seperator_c),
                 widget.GroupBox(**groupbox_c),
                 widget.Sep(**seperator_c),
-                #widget.CheckUpdates(**pacman_c),
                 widget.Prompt(name='prompt',
-                        bell_style='visual', prompt='>>>  ',
-                        visual_bell_color=widget_defaults['background'],
-                        **widget_defaults),
+                              bell_style='visual', prompt='>>>  ',
+                              visual_bell_color=widget_defaults['background'],
+                              **widget_defaults),
                 widget.TaskList(**tasklist_c),
-                #widget.Sep(**seperator_c),
-                #widget.Battery(**battery_c),
                 widget.Sep(**seperator_c),
                 widget.Clock(**clock_date_c),
                 widget.Sep(**seperator_c),

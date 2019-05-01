@@ -4,40 +4,40 @@ from libqtile.command import lazy, Client
 from libqtile.dgroups import simple_key_binder
 from libqtile.widget import KeyboardLayout
 
-mod = "mod4"
-mod1 = "mod1"
-dgroups_key_binder = simple_key_binder(mod)
+MOD = "mod4"
+MOD1 = "mod1"
+dgroups_key_binder = simple_key_binder(MOD)
 
 keys = [
     # Switch between windows in current stack pane
     Key(
-        [mod], "k",
+        [MOD], "k",
         lazy.layout.down()
     ),
     Key(
-        [mod], "j",
+        [MOD], "j",
         lazy.layout.up()
     ),
 
     # Move windows up or down in current stack
     Key(
-        [mod, "control"], "k",
+        [MOD, "control"], "k",
         lazy.layout.shuffle_down()
     ),
     Key(
-        [mod, "control"], "j",
+        [MOD, "control"], "j",
         lazy.layout.shuffle_up()
     ),
 
     # Switch window focus to other pane(s) of stack
     Key(
-        [mod], "n",
+        [MOD], "n",
         lazy.layout.next()
     ),
 
     # Swap panes of split stack
     Key(
-        [mod, "shift"], "space",
+        [MOD, "shift"], "space",
         lazy.layout.rotate()
     ),
 
@@ -47,27 +47,27 @@ keys = [
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
     Key(
-        [mod, "shift"], "Return",
+        [MOD, "shift"], "Return",
         lazy.layout.toggle_split()
     ),
-    Key([mod], "Return", lazy.spawn("urxvt")),
-    Key([mod], "t", lazy.spawn("urxvt")),
+    Key([MOD], "Return", lazy.spawn("urxvt")),
+    Key([MOD], "t", lazy.spawn("urxvt")),
 
-    Key([mod, "shift"], "u", lazy.spawn("urxvt -e ranger")),
+    Key([MOD, "shift"], "u", lazy.spawn("urxvt -e ranger")),
 
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout()),
-    Key([mod, "shift"], "w", lazy.window.kill()),
+    Key([MOD], "Tab", lazy.next_layout()),
+    Key([MOD, "shift"], "w", lazy.window.kill()),
 
-    Key([mod, "control"], "r", lazy.restart()),
-    Key([mod, "control"], "q", lazy.shutdown()),
-    Key([mod], "d", lazy.spawncmd()),
-    Key([mod, "shift"], "h", lazy.layout.grow_right()),
-    Key([mod, "shift"], "l", lazy.layout.grow_left()),
+    Key([MOD, "control"], "r", lazy.restart()),
+    Key([MOD, "control"], "q", lazy.shutdown()),
+    Key([MOD], "d", lazy.spawncmd()),
+    Key([MOD, "shift"], "h", lazy.layout.grow_right()),
+    Key([MOD, "shift"], "l", lazy.layout.grow_left()),
 
     # Start applications
-    Key([mod], "f", lazy.spawn("firefox")),
-    Key([mod], "m", lazy.spawn("pcmanfm")),
+    Key([MOD], "f", lazy.spawn("firefox")),
+    Key([MOD], "m", lazy.spawn("pcmanfm")),
     Key(["shift"], "space",
         lazy.widget["keyboardlayout"].next_keyboard()),
 
@@ -75,9 +75,9 @@ keys = [
 
 
 mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(),
+    Drag([MOD], "Button1", lazy.window.set_position_floating(),
                 start=lazy.window.get_position()),
-    Drag([mod], "Button3", lazy.window.set_size_floating(),
+    Drag([MOD], "Button3", lazy.window.set_size_floating(),
                 start=lazy.window.get_size()),
-    Click([mod], "Button2", lazy.window.bring_to_front())
+    Click([MOD], "Button2", lazy.window.bring_to_front())
 ]

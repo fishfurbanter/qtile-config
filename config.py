@@ -18,7 +18,6 @@ from screen import screens, widget_defaults
 # from libqtile.drawer import Drawer
 # from libqtile.scripts import qtile
 
-
 main = None
 follow_mouse_focus = True
 bring_front_click = False
@@ -38,19 +37,3 @@ dgroups_app_rules = []
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([home])
-
-# def main(qtile):
-#     #pass
-#     default_infobox = dict(
-#         x = 500,
-#         y = 500,
-#         x_internal = 100,
-#         y_internal = 100,
-#         height = 300,
-#         width = 300,
-#         height_internal = 100,
-#         width_internal = 100,
-#         opacity_internal = 1,
-#         hide_box = True,
-#     )
-#     InfoBox.create_box(qtile, **default_infobox)
