@@ -50,10 +50,10 @@ keys = [
         [MOD, "shift"], "Return",
         lazy.layout.toggle_split()
     ),
-    Key([MOD], "Return", lazy.spawn("urxvt")),
-    Key([MOD], "t", lazy.spawn("urxvt")),
+    Key([MOD], "Return", lazy.spawn("kitty")),
+    Key([MOD], "t", lazy.spawn("kitty")),
 
-    Key([MOD, "shift"], "u", lazy.spawn("urxvt -e ranger")),
+    Key([MOD, "shift"], "u", lazy.spawn("kitty -e ranger")),
 
     # Toggle between different layouts as defined below
     Key([MOD], "Tab", lazy.next_layout()),
