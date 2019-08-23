@@ -7,7 +7,7 @@ from libqtile import layout, bar, widget, hook
 from libqtile.command import lazy
 
 # Split files imports
-from key import mod, dgroups_key_binder, keys
+from key import MOD, dgroups_key_binder, keys
 from group import groups
 from layout import layouts
 from screen import screens, widget_defaults
