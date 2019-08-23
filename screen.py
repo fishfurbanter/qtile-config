@@ -10,7 +10,8 @@ wallpaper_dir = os.environ['WALLPAPER_DIR']
 
 # Widget defaults config
 widget_defaults = dict(
-    font='Droid Sans Mono Dotted For Powerline',
+    # font='Droid Sans Mono Dotted For Powerline',
+    font='Fira Code Regular',
     fontsize=16,
     background='#2f343f',
     padding=10,
@@ -33,7 +34,8 @@ wallpaper_c = dict(
 
 # GroupBox config
 groupbox_c = dict(
-    padding=3,
+    padding=5,
+    spacing=15,
 )
 
 # User login name
@@ -127,7 +129,9 @@ screens = [
                 widget.TextBox(text=''),
                 widget.TextBox(text='  '),
                 widget.NetGraph(),
-                widget.TextBox(text=' '),
+                widget.CheckUpdates(
+                        display_format="🠝 {updates}",
+                    )
             ],
             27,
         ),
